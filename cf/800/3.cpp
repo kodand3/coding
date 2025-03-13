@@ -42,18 +42,11 @@ int main(){
     cin >> t;
 
     while(t--){
-        ll n, odd = 0, even = 0;
-        cin >> n;
-        rep(i, n){
-            ll temp;
-            cin >> temp;
-            odd += (temp&1);
-            even += !(temp&1);
-        }
-        if(even>0)
-            cout << (even>0) + odd << endl;
-        else 
-            cout << odd-1 << endl;
+        int m, n;
+        cin >> m >> n;
+        int mn = min(m, n);
+        int mx = max(m, n);
+        cout << mx+1 << endl;
     }
     return 0;
 }
